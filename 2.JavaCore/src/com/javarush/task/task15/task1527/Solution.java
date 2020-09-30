@@ -21,6 +21,7 @@ public class Solution {
         boolean b = false;
         boolean obj = false;
         Double doubles = null;
+        String stringF = "";
 
         for (String string: str2){
             str3 = string.split("=");
@@ -33,6 +34,7 @@ public class Solution {
                         //
                        b = true;
                     } catch (NumberFormatException nfe) {
+                        stringF = str3[1];
                        b = false;
                     }
                 }
@@ -43,7 +45,7 @@ public class Solution {
         }else {
             if(obj) {
                 System.out.println();
-                alert(str3[1]);
+                alert(stringF);
             }
         }
     }
