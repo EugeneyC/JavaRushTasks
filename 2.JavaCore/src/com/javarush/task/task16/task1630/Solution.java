@@ -38,8 +38,10 @@ public class Solution {
     static{
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         try {
-            firstFileName = reader.readLine();
-            secondFileName = reader.readLine();
+            synchronized (reader) {
+                firstFileName = reader.readLine();
+                secondFileName = reader.readLine();
+            }
         } catch (IOException e) {
         }
     }//add your code here - добавьте код тут
